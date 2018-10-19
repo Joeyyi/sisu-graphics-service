@@ -1,0 +1,27 @@
+{
+  "name": "sisu-graphics-service",
+  "version": "1.0.0",
+  "description": "sisu-graphics-service",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js --config nodemonconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joeyyi/sisu-graphics-service.git"
+  },
+  "author": "Joey Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joeyyi/sisu-graphics-service/issues"
+  },
+  "homepage": "https://github.com/Joeyyi/sisu-graphics-service#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
