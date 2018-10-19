@@ -17,6 +17,7 @@ function resGenerator(status, key, value) {
 
 router.get('/', (req, res) => {
   //         let res = mapData[params.campus || 0].buildings[params.building || 0].floors[params.floor || 0];
+  res.header('Access-Control-Allow-Origin','*')
   if (!req.query.campus) {
     res.send(resGenerator(2, 'redirect', '/'))
   } else if (!req.query.building) {

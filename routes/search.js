@@ -32,6 +32,7 @@ mapData.forEach((campus, iC) => {
 })
 
 router.get('/', (req, res) => {
+  res.header('Access-Control-Allow-Origin','*')
   var keywords = req.query.kw.split(' ');
   var result = arr;
   for (i = 0; i < keywords.length; i++) {
