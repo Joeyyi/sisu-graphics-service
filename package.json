@@ -4,6 +4,7 @@
   "description": "sisu-graphics-service",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js --config nodemon.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
