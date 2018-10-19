@@ -13,7 +13,8 @@ var brief = mapData.map((campus) => {
   })
 })
 router.get('/', (req, res) => {
-  res.send(JSON.stringify(brief));
+  var response = Object.assign({}, brief, {responseStatus: 1} )
+  res.send(JSON.stringify(response));
 })
 
 module.exports = router;
