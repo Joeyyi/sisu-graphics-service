@@ -3,7 +3,7 @@ var router  = express.Router();
 var mapData = require('../public/mapData.json');
 
 var brief = mapData.map((campus) => {
-  return campus.buildings.map((building) => {
+  var buildings = campus.buildings.map((building) => {
     return {
       name: building.name,
       tags: building.tags,
@@ -11,9 +11,16 @@ var brief = mapData.map((campus) => {
       stories: building.floors.length
     }
   })
+  return {
+    name: campus.name,
+    address: campus.address,
+    description: campus.description,
+    buildings: buildings
+  }
 })
+
 router.get('/', (req, res) => {
-  var response = Object.assign({}, brief, {responseStatus: 1} )
+  var response = Object.assign({}, {data: brief}, {responseStatus: 1} )
   res.header('Access-Control-Allow-Origin','*')
   res.send(JSON.stringify(response));
 })
