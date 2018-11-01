@@ -23,7 +23,7 @@ mapData.forEach((campus, iC) => {
         if (room.type !== 1) return
         arr.push({
           index: [iC, iB, iF, iR],
-          name: (iB + 1).toString() + room.numbers.join('-' + (iB + 1).toString()) + '(' + campus.name + '校区' + building.name + floor.name + ')'
+          name: (iB + 1).toString() + room.numbers.join('-' + (iB + 1).toString()) + ' (' + campus.name + '校区' + building.name + floor.name + ')'
           // name: (iF + 1).toString() + room.numbers.join('-' + (iF + 1).toString()) + room.name ? '楼' + room.name : '' + '(' + campus.name + '校区' + floor.name + ')'
         })
       })
